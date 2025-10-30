@@ -1,0 +1,33 @@
+site:
+  title: Antora Sample Docs
+  url: https://docs.antora.org
+  start_page: entrance-doc::index.adoc
+  robots: allow
+content:
+  sources:
+  - url: ./entrance-doc
+    start_path: entrance-doc
+    branches: origin/main
+  - url: ./component-a
+    start_path: component-a
+    branches: origin/main
+  - url: component-b
+    start_path: component-a
+    branches: origin/main
+
+asciidoc:
+  attributes:
+    experimental: ''
+    hide-uri-scheme: '@'
+    idprefix: ''
+    idseparator: '-'
+    page-pagination: ''
+    table-frame: 'none@'
+    table-grid: 'rows@'
+
+ui:
+  bundle:
+    url: ./ui-bundle-spring
+
+output:
+  dir: ./generated-site

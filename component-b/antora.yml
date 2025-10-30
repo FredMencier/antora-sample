@@ -1,0 +1,10 @@
+name: component-b
+title: Component B
+version: 2.0.0
+start_page: inline-text-formatting.adoc
+asciidoc:
+  attributes:
+    source-language: asciidoc@
+    table-caption: false
+nav:
+- modules/ROOT/nav.adoc
