@@ -22,15 +22,15 @@ Cet exemple d'utilisation d'__Antora__ présente les ppoints suivants :
 
 Run Antora using docker image
 ```shell
-    docker run -v /Users/fredericmencier/Projects/antora-sample:/antora:Z --rm -t antora/antora antora-playbook.yml
+docker run -v /Users/fredericmencier/Projects/antora-sample:/antora:Z --rm -t antora/antora antora-playbook.yml
 ```
 
 Build d'une image custom Antora
 ```shell
-    docker build -t docker-antora-custom -f Dockerfile.antora .
+docker build -t docker-antora-custom -f Dockerfile.antora .
 ```
 
 Run Antora using custom docker image
 ```shell
-    docker run -v /Users/fredericmencier/Projects/antora-sample:/antora:Z --rm -t docker-antora-custom antora-playbook.yml
+docker run -v /Users/fredericmencier/Projects/antora-sample:/antora:Z --rm -t docker-antora-custom antora-playbook.yml
 ```
