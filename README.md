@@ -34,5 +34,3 @@ Run Antora using custom docker image
 ```shell
     docker run -v /Users/fredericmencier/Projects/antora-sample:/antora:Z --rm -t docker-antora-custom antora-playbook.yml
 ```
-
-docker run --rm -it docker-antora-custom sh
