@@ -17,7 +17,7 @@ Cet exemple d'utilisation d'__Antora__ présente les ppoints suivants :
 - Définition du fichier __antora-playbook.yml__ permettant de créer et d'aggréger les différents composants dans une même documentation
 - Utilisation d'une ui custom : ui-bundle-spring
 - Utilisation d'une image Docker Antora permettant de builder la documentation
-- Création d'une extension __Macro__ permettant d'ajouter un rendu de type __Card__ sur la home page (entance-doc)
+- Création d'une extension __Macro__ (card-block.js) permettant d'ajouter un rendu de type __Card__ sur la home page (entance-doc)
 
 
 Run Antora using docker image
