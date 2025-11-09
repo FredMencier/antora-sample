@@ -1,1 +1,13 @@
-= Entrance Documentation
+= Choose Documentation
+
+[cols="1,1"]
+|===
+a|
+card::Java 24[role=info, content="Nouveautés Java 24", version="1.0.0", xref=component-java24::index.adoc]
+a|
+card::Java 25[role=info, content="Nouveautés Java 25", version="2.0.0", lts=true, xref=component-java25::index.adoc]
+
+|===
+
+
+Site d'informations : {other-docs-url}

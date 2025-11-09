@@ -1,0 +1,41 @@
+== JEP 513 : Flexible Constructor Bodies
+
+
+Lien vers la JEP : https://openjdk.org/jeps/513
+
+
+TIP: Avant Java 25, il n’était pas possible d’écrire des instructions avant l’appel au constructeur parent de la classe (méthode super()). Dans certains cas, cela pouvait entraîner des appels inutiles, notamment lorsque des validations de paramètres étaient nécessaires avant l’initialisation de l’objet. Le langage permet désormais de pouvoir écrire des instructions **avant l’appel à super()**, ce qui offre plus de flexibilité dans la gestion de l’initialisation des objets.
+
+
+Avant Java 25 :
+[source, Java]
+----
+public class PositiveInteger extends BigInteger {
+
+    public PositiveInteger(String val) {
+        super(val);
+        long longValue = Long.parseLong(val);
+        if (longValue <= 0) {
+            throw new IllegalArgumentException("non-positive value");
+        }
+    }
+}
+----
+
+
+Avec Java 25 :
+[source, Java]
+----
+public class PositiveInteger extends BigInteger {
+
+    public PositiveInteger(String val) {
+        long longValue = Long.parseLong(val);
+        if (longValue <= 0) {
+            throw new IllegalArgumentException("non-positive value");
+        }
+        // Appel à super() en dernier
+        // -> Evite les appels inutiles au constructeur parent si une exception est levée en amont
+        super(val);
+    }
+}
+----

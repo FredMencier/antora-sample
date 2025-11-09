@@ -1,2 +1,0 @@
-* xref:chapter1.adoc[]
-* xref:chapter2.adoc[]

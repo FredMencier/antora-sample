@@ -1,0 +1,31 @@
+== JEP 456 : Unamed Variables & Pattern
+
+
+Lien vers la JEP : https://openjdk.org/jeps/456
+
+
+TIP: Les variables inutilisées peuvent être déclarées avec le nom de variable « _ » (underscore)
+
+[source, Java]
+----
+    String s = "un_nombre";
+    try {
+        int i = Integer.parseInt(s);
+    }
+    catch (NumberFormatException ex) { // ex est non utilisée
+        System.out.println("Bad number: " + s);
+    }
+----
+
+avec Java 25, nous pouvons écrire :
+
+[source, Java]
+----
+    String s = "un_nombre";
+    try {
+        int i = Integer.parseInt(s);
+    }
+    catch (NumberFormatException _) {
+        System.out.println("Bad number: " + s);
+    }
+----

@@ -1,12 +1,10 @@
-name: entrance-doc
-title: Entrance Documentation
+name: component-java24
+title: Java 24
 version: 1.0.0
 start_page: index.adoc
 asciidoc:
   attributes:
     source-language: asciidoc@
     table-caption: false
-    other-docs-url: "https://lescastcodeurs.com"
-    other-docs-label: "Les cast codeurs"
 nav:
   - modules/ROOT/nav.adoc

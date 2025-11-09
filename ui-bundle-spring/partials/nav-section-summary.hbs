@@ -1,7 +1,0 @@
-{{#unless (eq page.attributes.section-summary-toc undefined)}}
-{{#with page.navigation}}
-<div class="section-summary">
-{{> nav-section-summary-tree navigation=(nav_children this ../page.url)}}
-</div>
-{{/with}}
-{{/unless}}

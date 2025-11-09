@@ -1,0 +1,12 @@
+== Nouveautés Java 24
+
+[NOTE]
+====
+Java 24 n’introduit pas de nouvelle fonctionnalité majeure.
+
+Plusieurs JEP sont reconduites en preview pour encourager les retours des utilisateurs.
+====
+
+Voici quelques nouveautés apportées :
+
+* xref:jep488.adoc[JEP 488 : Primitive Types in Patterns, instanceof, and switch (Second Preview)]

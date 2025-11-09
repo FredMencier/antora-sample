@@ -1,0 +1,15 @@
+== JEP 488 : Primitive Types in Patterns, instanceof, and switch (Second Preview)
+
+
+Lien vers la JEP : https://openjdk.org/jeps/488
+
+
+TIP: Permettre l’utilisation des types primitifs dans les patterns, les instanceof et les switch.
+
+[source, Java]
+----
+int x = 65;
+if (x instanceof char c) {
+  System.out.println("c = " + c); // Sortie : "c = A"
+}
+----

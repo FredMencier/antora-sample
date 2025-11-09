@@ -1,19 +1,18 @@
 site:
-  title: Antora Sample Docs
-  url: https://docs.antora.org
+  title: Java news [Antora Demo site]
   start_page: entrance-doc::index.adoc
   robots: allow
 content:
   sources:
-  - url: ./entrance-doc
-    start_path: entrance-doc
-    branches: origin/main
-  - url: ./component-a
-    start_path: component-a
-    branches: origin/main
-  - url: component-b
-    start_path: component-a
-    branches: origin/main
+    - url: ./
+      start_path: entrance-doc
+      branches: HEAD
+    - url: ./
+      start_path: component-java24
+      branches: HEAD
+    - url: ./
+      start_path: component-java25
+      branches: HEAD
 
 asciidoc:
   attributes:
@@ -24,10 +23,24 @@ asciidoc:
     page-pagination: ''
     table-frame: 'none@'
     table-grid: 'rows@'
+  extensions:
+    - './entrance-doc/extensions/card-block.js'
+
+antora:
+  extensions:
+    - '/usr/local/lib/node_modules/@antora/lunr-extension'
 
 ui:
   bundle:
-    url: ./ui-bundle-spring
+    #Permet de tester le site avec le ui-bundle par defaut d'antora
+    #url: '/usr/local/lib/node_modules/@antora/ui-bundle-spring'
+
+    #Permet de debugger en local la ui
+    #url: ./ui-bundle
+
+    #Permet d'utiliser un bundle prebuild'
+    url: "https://github.com/FredMencier/antora-ui-spring/releases/download/1.0.0/ui-bundle.zip"
+    snapshot: true
 
 output:
   dir: ./generated-site

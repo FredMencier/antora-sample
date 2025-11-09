@@ -1,2 +1,2 @@
-* xref:component-a:chapter1.adoc[Composant A, Chapitre 1]
-* xref:component-b:chapter1.adoc[Composant B, Chapitre 1]
+* xref:component-java24::index.adoc[Nouveautés Java 24]
+* xref:component-java25::index.adoc[Nouveautés Java 25]

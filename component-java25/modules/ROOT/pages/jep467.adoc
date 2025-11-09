@@ -1,0 +1,57 @@
+== JEP 467 : Markdown Documentation Comments
+
+
+Lien vers la JEP : https://openjdk.org/jeps/467
+
+
+TIP: Java 25 permet désormais d’utiliser le format https://www.markdownguide.org/basic-syntax/[*Markdown*] pour les commentaires de documentation.
+
+Avant Java 25 :
+[source, Java]
+----
+    /**
+     * <p>Donne un <b>entier</b> à partir d'une chaine de caractère.
+     * en cas d'impossibilité, la fonction renvoie null
+     * </p>
+     * <p><b>Fonctions:</b></p>
+     * <ul>
+     *     <li>Transforme une chaine de caractère en entier</li>
+     * </ul>
+     * @param aNumber
+     * @return Le nombre correspondant à la chaine de caractère passée en paramètre.
+     */
+    public Integer getNumber(String aNumber) {
+        try {
+            return Integer.parseInt(aNumber);
+        }
+        catch (NumberFormatException ex) { // ex est non utilisée
+            System.out.println("Bad number: " + aNumber);
+            return null;
+        }
+    }
+----
+
+Avec Java 25 :
+[source, Java]
+----
+     /// Donne un **entier** à partir d'une chaine de caractère.
+     /// en cas d'impossibilité, la fonction renvoie null
+     ///
+     /// **Fonctions:**
+     /// - Transforme une chaine de caractère en entier
+     /// @param aNumber
+     /// @return Le nombre correspondant à la chaine de caractère passée en paramètre.
+    public Integer getNumber(String aNumber) {
+        try {
+            return Integer.parseInt(aNumber);
+        }
+        catch (NumberFormatException ex) {
+            System.out.println("Bad number: " + aNumber);
+            return null;
+        }
+    }
+----
+
+Intellij permet la prévusualisation de la doc avec Markdown
+
+image::javadoc-md.png[image]

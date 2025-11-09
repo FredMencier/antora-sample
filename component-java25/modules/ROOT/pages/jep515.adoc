@@ -1,0 +1,33 @@
+== JEP 483, 514 et 515 Cache Ahead-Of-Time (AOT)
+
+
+Lien vers la JEP : https://openjdk.org/jeps/515
+
+
+[TIP]
+===
+Java 25 améliore considérablement les performances des applications Java grâce à la création d’un cache Ahead-Of-Time (AOT).
+Ce cache est construit lors d’un **run d’entrainement** de l’application Java, qui enregistre les classes et méthodes utilisées, puis génère un cache AOT optimisé pour ces classes et méthodes.
+Lors du démarrage de l’application, ce cache est chargé en mémoire, ce qui permet de réduire le temps de compilation Just-In-Time (JIT) et d’améliorer ainsi le temps de démarrage global de l’application
+===
+
+L'utilisation de cette optimisation se passe en 2 temps :
+
+- Créer le fichier de cache AOT avec la phase d'entrainement
+- Utilisation du cache au lancement de l'application
+
+
+Pour créer ce cache AOT lors de la phase d'entrainement, il faut utiliser l'option `-XX:AOTCacheOutput`
+
+[source, Shell]
+----
+$ java -XX:AOTCacheOutput=monApp.aot -cp monApp.jar org.heg.MonApp
+----
+
+
+Pour utiliser ce cache AOT, il faut utiliser l'option `-XX:AOTCache`
+
+[source, Shell]
+----
+$ java -XX:AOTCache=monApp.aot -cp monApp.jar org.heg.MonApp
+----

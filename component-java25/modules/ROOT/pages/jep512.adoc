@@ -1,0 +1,30 @@
+== JEP 512 : Compact Source Files and Instance Main Methods
+
+
+Lien vers la JEP : https://openjdk.org/jeps/512
+
+
+TIP: Il est désormais possible de coder de manière plus compacte afin de simplifier la synthaxe.
+
+- Une classe avec une méthode `public static void main(String[] args)` peut être remplacé par une méthode d’instance `main()`.
+- Nouvelle classe dans le package `java.lang` pour fournir des méthodes I/O simplifiées et plus compréhensibles.
+- Import automatique d’APIs standards du package `java.lang` lorsque le code est écrit dans un format compact.
+
+Avant Java 25 :
+[source, Java]
+----
+class HelloWorld {
+    void main() {
+        System.out.println("Hello, not a compact world!");
+    }
+}
+----
+
+
+Avec Java 25 :
+[source, Java]
+----
+main() {
+    IO.println("Hello, compact world!");
+}
+----

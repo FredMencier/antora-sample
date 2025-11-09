@@ -1,0 +1,10 @@
+== JEP 521 Generational Shenandoah
+
+
+Lien vers la JEP : https://openjdk.org/jeps/521
+
+
+[TIP]
+====
+
+====

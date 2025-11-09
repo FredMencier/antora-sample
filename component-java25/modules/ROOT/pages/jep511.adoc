@@ -1,0 +1,38 @@
+== JEP 511 : Module Import Declarations
+
+
+Lien vers la JEP : https://openjdk.org/jeps/511
+
+
+TIP: Java 25 introduit la possibilité d’importer les packages requis dans le code source Java avec une seule déclaration `import module` dans le fichier source Java. Cela simplifie la gestion des dépendances.
+
+Avant Java 25 :
+[source, Java]
+----
+import java.util.Map;                   // or import java.util.*;
+import java.util.function.Function;     // or import java.util.function.*;
+import java.util.stream.Collectors;     // or import java.util.stream.*;
+import java.util.stream.Stream;         // (can be removed)
+
+...
+
+String[] towns = new String[] { "paris", "london", "miami", "geneva" };
+Map<String, String> m =
+    Stream.of(towns)
+          .collect(Collectors.toMap(s -> s.toUpperCase().substring(0,1),
+                                    Function.identity()));
+----
+
+Avec Java 25 :
+[source, Java]
+----
+import module java.base;    // Import all exported packages from java.base
+
+...
+
+String[] towns = new String[] { "paris", "london", "miami", "geneva" };
+Map<String, String> m =
+    Stream.of(towns)
+          .collect(Collectors.toMap(s -> s.toUpperCase().substring(0,1),
+                                    Function.identity()));
+----

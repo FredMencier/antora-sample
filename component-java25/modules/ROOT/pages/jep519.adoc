@@ -1,0 +1,21 @@
+== JEP 519 Compact Object Headers
+
+
+Lien vers la JEP : https://openjdk.org/jeps/519
+
+
+[TIP]
+====
+En optimisant la structure des en-têtes d’objets, Java 25 permet de diminuer la consommation mémoire des applications.
+
+Ceci qui est particulièrement bénéfique pour les applications avec un grand nombre d’objets en mémoire. Cette optimisation contribue également à améliorer les performances globales des applications Java, notamment en réduisant la pression sur les sollicitations du Garbage Collector (GC).
+====
+
+
+Cette optimisation n'est pas active par défaut. Pour l'utiliser il faut activer l'option `-XX:+CompactObjectHeaders`
+
+
+[source, Shell]
+----
+$ java -XX:+CompactObjectHeaders -cp monApp.jar org.heg.MonApp
+----

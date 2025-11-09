@@ -1,0 +1,9 @@
+FROM antora/antora
+
+LABEL maintainers="Frédéric Mencier" \
+    name="docker-antora-custom"\
+    image_description="Image custom Antora"
+
+#COPY ui-bundle-spring /usr/local/lib/node_modules/@antora/ui-bundle-spring
+RUN npm i -g @antora/lunr-extension
+RUN npm i -g @springio/antora-extensions
