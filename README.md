@@ -9,7 +9,7 @@ Antora s'appuie sur le format AsciiDoc
 
 ## Antora multi component sample
 
-Cet exemple d'utilisation d'__Antora__ présente les ppoints suivants :
+Cet exemple d'utilisation d'__Antora__ présente les points suivants :
 - Définition de plusieurs composants
     - component-java24
     - component-java25
