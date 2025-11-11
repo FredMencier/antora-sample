@@ -6,5 +6,14 @@ Lien vers la JEP : https://openjdk.org/jeps/521
 
 [TIP]
 ====
+Shenandoah est un GC à faible latence qui vise à minimiser les pauses de l’application en effectuant la plupart de son travail de collecte en parallèle de l’exécution de l’application.
 
+Shenandoah n’est pas le GC par défaut dans Java. Il est plutôt préconisé pour des applications utilisant une grosse heap. Pour utiliser le GC Shenandoah il faut activer l'option `-XX:+UseShenandoahGC`
+
+Le mode par défaut "non-générationnel" est toujours disponible. Pour activer le mode générationnel de Shenandoah, il suffit d’ajouter l’option `-XX:ShenandoahGCMode=generational` à la JVM.
 ====
+
+[source, Shell]
+----
+$ java -XX:+UseShenandoahGC -XX:ShenandoahGCMode=generational -cp monApp.jar org.heg.MonApp
+----

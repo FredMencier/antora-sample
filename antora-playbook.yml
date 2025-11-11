@@ -33,14 +33,17 @@ antora:
 ui:
   bundle:
     #Permet de tester le site avec le ui-bundle par defaut d'antora
-    #url: '/usr/local/lib/node_modules/@antora/ui-bundle-spring'
+    #url: "https://gitlab.com/antora/antora-ui-default/-/jobs/artifacts/HEAD/raw/build/ui-bundle.zip?job=bundle-stable"
+    #snapshot: true
 
     #Permet de debugger en local la ui
     #url: ./ui-bundle
 
     #Permet d'utiliser un bundle prebuild'
     url: "https://github.com/FredMencier/antora-ui-spring/releases/download/1.0.0/ui-bundle.zip"
-    snapshot: true
+
+    #Permet de tester le site avec une ui-bundle embarquée dans l'image docker
+    #url: '/usr/local/lib/node_modules/@antora/ui-bundle'
 
 output:
   dir: ./generated-site
