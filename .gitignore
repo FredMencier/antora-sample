@@ -15,6 +15,6 @@ buildNumber.properties
 .project
 # JDT-specific (Eclipse Java Development Tools)
 .classpath
-generated-site/
+docs/
 .DS_Store
 ui-bundle/
