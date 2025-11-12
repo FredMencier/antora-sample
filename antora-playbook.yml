@@ -44,6 +44,12 @@ ui:
 
     #Permet de tester le site avec une ui-bundle embarquée dans l'image docker
     #url: '/usr/local/lib/node_modules/@antora/ui-bundle'
+  supplemental_files:
+    - path: ui.yml
+      contents: |
+        static_files:
+        - .nojekyll
+    - path: .nojekyll
 
 output:
   dir: ./generated-site
