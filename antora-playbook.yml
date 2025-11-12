@@ -28,7 +28,8 @@ asciidoc:
 
 antora:
   extensions:
-    - '/usr/local/lib/node_modules/@antora/lunr-extension'
+    #- '/usr/local/lib/node_modules/@antora/lunr-extension'
+    - '/home/runner/work/antora-sample/antora-sample/node_modules/@antora/lunr-extension'
 
 ui:
   bundle:
