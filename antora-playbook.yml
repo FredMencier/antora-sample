@@ -46,7 +46,7 @@ ui:
     #Permet de tester le site avec une ui-bundle embarquée dans l'image docker
     #url: '/usr/local/lib/node_modules/@antora/ui-bundle'
 
-  #Utilisé pour dire a github action de ne pas utiliser jekyll lors du publish des pages  
+  #Utilisé pour dire a github action de ne pas utiliser jekyll lors du publish des pages
   supplemental_files:
     - path: ui.yml
       contents: |
