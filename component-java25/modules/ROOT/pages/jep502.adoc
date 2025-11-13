@@ -1,0 +1,15 @@
+== JEP 502 : Scoped Values
+
+
+Lien vers la JEP : https://openjdk.org/jeps/502
+
+
+[TIP]
+====
+
+====
+
+[source, Shell]
+----
+
+----

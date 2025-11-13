@@ -6,3 +6,4 @@
 * xref:jep515.adoc[JEP 483, 514 et 515 Cache Ahead-Of-Time (AOT)]
 * xref:jep519.adoc[JEP 519 Compact Object Headers]
 * xref:jep521.adoc[JEP 521 Generational Shenandoah]
+* xref:jep502.adoc[JEP 502 Scoped Values]
